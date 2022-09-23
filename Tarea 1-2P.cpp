@@ -13,20 +13,27 @@ public:
 	Fecha(string, string, string);
 	void datos();
 	void validar();
+
 };
+
+Fecha::Fecha(string _a1, string _m1, string _d1) {
+	a = _a1;
+	m = _m1;
+	d = _d1;
+}
 
 int a1, m1, d1;
 bool bisiesto = false;
 
 void Fecha::datos() {
 	
-	cout << "Ano: "; cin >> a; cout << endl;
+	cout << "Ano: "; cin >> a; cout << "\n";
 	a1 = stoi(a);
-	cout << "Mes: "; cin >> m; cout << endl;
+	cout << "Mes: "; cin >> m; cout << "\n";
 	m1 = stoi(m);
-	cout << "Dia: "; cin >> d; cout << endl;
+	cout << "Dia: "; cin >> d; cout << "\n";
 	d1 = stoi(d);
-
+	cout << a1 << "/" << m1 << "/" << d1 << "\n";
 }
 
 void Fecha::validar() {
@@ -54,11 +61,6 @@ void Fecha::validar() {
 			cout << "Fecha no valida \n";
 	}
 
-Fecha::Fecha(string _a1, string _m1, string _d1) {
-	a = _a1;
-	m = _m1;
-	d = _d1;
-}
 int main()
 {
 	Fecha fh("", "", "");
